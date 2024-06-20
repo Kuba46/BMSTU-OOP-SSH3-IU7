@@ -26,7 +26,7 @@ Vector<T>::Vector(int len)
         *iterator = 0;
 }
 
-// Конструктор на основе массива.
+// ГЉГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г­Г  Г®Г±Г­Г®ГўГҐ Г¬Г Г±Г±ГЁГўГ .
 template<typename T>
 Vector<T>::Vector(int len, T* array)
 {
@@ -51,7 +51,7 @@ Vector<T>::Vector(int len, T* array)
     }
 }
 
-// Конструктор на основе элементов.
+// ГЉГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г­Г  Г®Г±Г­Г®ГўГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў.
 template<typename T>
 Vector<T>::Vector(int len, T vector, ...)
 {
@@ -75,7 +75,7 @@ Vector<T>::Vector(int len, T vector, ...)
     va_end(var);
 }
 
-// Конструктор с инициализацией.
+// ГЉГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г± ГЁГ­ГЁГ¶ГЁГ Г«ГЁГ§Г Г¶ГЁГҐГ©.
 template<typename T>
 Vector<T>::Vector(std::initializer_list<T> args)
 {
@@ -98,7 +98,7 @@ Vector<T>::Vector(std::initializer_list<T> args)
     }
 }
 
-// Конструктор от вектора.
+// ГЉГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г®ГІ ГўГҐГЄГІГ®Г°Г .
 template<typename T>
 Vector<T>::Vector(const Vector<T>& vector)
 {
@@ -113,7 +113,7 @@ Vector<T>::Vector(const Vector<T>& vector)
         *iteratorTo = *iteratorFrom;
 }
 
-// Конструктор переносом.
+// ГЉГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЇГҐГ°ГҐГ­Г®Г±Г®Г¬.
 template<typename T>
 Vector<T>::Vector(Vector<T>&& vector) noexcept
 {
@@ -123,7 +123,7 @@ Vector<T>::Vector(Vector<T>&& vector) noexcept
     vector.values = nullptr;
 }
 
-// Деструктор.
+// Г„ГҐГ±ГІГ°ГіГЄГІГ®Г°.
 template<typename T>
 Vector<T>::~Vector()
 {
@@ -131,7 +131,7 @@ Vector<T>::~Vector()
         values.reset();
 }
 
-// Операторы присваивания
+// ГЋГЇГҐГ°Г ГІГ®Г°Г» ГЇГ°ГЁГ±ГўГ ГЁГўГ Г­ГЁГї
 template<typename T>
 Vector<T>& Vector<T>::operator =(const Vector<T>& vector)
 {
@@ -181,7 +181,7 @@ Vector<T>& Vector<T>::operator =(Vector<T>&& vector)
     return *this;
 }
 
-// Получение элемента по индексу.
+// ГЏГ®Г«ГіГ·ГҐГ­ГЁГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ  ГЇГ® ГЁГ­Г¤ГҐГЄГ±Гі.
 template<typename T>
 T& Vector<T>::getItem(int index)
 {
@@ -194,7 +194,7 @@ T& Vector<T>::getItem(int index)
     return *iterator;
 }
 
-// Получение элемента по индексу Const.
+// ГЏГ®Г«ГіГ·ГҐГ­ГЁГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ  ГЇГ® ГЁГ­Г¤ГҐГЄГ±Гі Const.
 template<typename T>
 const T& Vector<T>::getItem(int index) const 
 {
@@ -220,7 +220,7 @@ bool Vector<T>::isEmpty() const noexcept
     return bool(size);
 }
 
-// Установить значени по индексу
+// Г“Г±ГІГ Г­Г®ГўГЁГІГј Г§Г­Г Г·ГҐГ­ГЁ ГЇГ® ГЁГ­Г¤ГҐГЄГ±Гі
 template<typename T>
 bool Vector<T>::setItem(int index, const T& item)
 {
@@ -236,21 +236,21 @@ bool Vector<T>::setItem(int index, const T& item)
     return res;
 }
 
-// Оператор индексации.
+// ГЋГЇГҐГ°Г ГІГ®Г° ГЁГ­Г¤ГҐГЄГ±Г Г¶ГЁГЁ.
 template<typename T>
 T& Vector<T>::operator[] (int index)
 {
     return getItem(index);
 }
 
-// Оператор индексации Const.
+// ГЋГЇГҐГ°Г ГІГ®Г° ГЁГ­Г¤ГҐГЄГ±Г Г¶ГЁГЁ Const.
 template<typename T>
 const T& Vector<T>::operator [](int index) const
 {
     return getItem(index);
 }
 
-// Проверка на нулевой вектор - длина равная 0
+// ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  Г­ГіГ«ГҐГўГ®Г© ГўГҐГЄГІГ®Г° - Г¤Г«ГЁГ­Г  Г°Г ГўГ­Г Гї 0
 template<typename T>
 bool Vector<T>::isSingle() const
 {
@@ -259,7 +259,7 @@ bool Vector<T>::isSingle() const
     return false;
 }
 
-// Проверка на единичный вектор - длина равная 1
+// ГЏГ°Г®ГўГҐГ°ГЄГ  Г­Г  ГҐГ¤ГЁГ­ГЁГ·Г­Г»Г© ГўГҐГЄГІГ®Г° - Г¤Г«ГЁГ­Г  Г°Г ГўГ­Г Гї 1
 template<typename T>
 bool Vector<T>::isZero() const
 {
@@ -268,7 +268,7 @@ bool Vector<T>::isZero() const
     return false;
 }
 
-// вычисление длины вектора
+// ГўГ»Г·ГЁГ±Г«ГҐГ­ГЁГҐ Г¤Г«ГЁГ­Г» ГўГҐГЄГІГ®Г°Г 
 template<typename T>
 T Vector<T>::getLength() const
 {
@@ -340,7 +340,7 @@ Vector<T>& Vector<T>::mulNumEqual(const T& num)
     return operator*=(num);
 }
 
-// Умножение элементов двух векторов
+// Г“Г¬Г­Г®Г¦ГҐГ­ГЁГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў Г¤ГўГіГµ ГўГҐГЄГІГ®Г°Г®Гў
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator ^(const Vector<U>& vector) const
@@ -396,7 +396,7 @@ Vector<T>& Vector<T>::mulElemsEqual(const Vector<T>& vector)
     return operator^=(vector);
 }
 
-// Скалярное произведение
+// Г‘ГЄГ Г«ГїГ°Г­Г®ГҐ ГЇГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­ГЁГҐ
 template<typename T>
 template<typename U>
 auto Vector<T>::operator *(const Vector<U>& vector) const
@@ -436,7 +436,7 @@ T Vector<T>::scalarMulEqual(const Vector<T>& vector)
     return operator*=(vector);
 }
 
-// Векторное произведение
+// Г‚ГҐГЄГІГ®Г°Г­Г®ГҐ ГЇГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­ГЁГҐ
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator &(const Vector<U>& vector) const
@@ -489,7 +489,7 @@ Vector<T>& Vector<T>::vectorMulEqual(const Vector<T>& vector)
     return operator&=(vector);
 }
 
-// Деление двух векторов
+// Г„ГҐГ«ГҐГ­ГЁГҐ Г¤ГўГіГµ ГўГҐГЄГІГ®Г°Г®Гў
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator /(const Vector<U>& vector) const
@@ -552,7 +552,7 @@ Vector<T>& Vector<T>::divEqual(const Vector<T>& vector)
     return operator/=(vector);
 }
 
-// Деление вектора на число
+// Г„ГҐГ«ГҐГ­ГЁГҐ ГўГҐГЄГІГ®Г°Г  Г­Г  Г·ГЁГ±Г«Г®
 template<typename T>
 Vector<T>& Vector<T>::operator /=(const T& number)
 {
@@ -597,7 +597,7 @@ decltype(auto) Vector<T>::divNum(const U& number) const
 }
 
 
-// Равны ли вектора.
+// ГђГ ГўГ­Г» Г«ГЁ ГўГҐГЄГІГ®Г°Г .
 template<typename T>
 bool Vector<T>::operator ==(const Vector<T>& vector) const {
     bool res = true;
@@ -618,7 +618,7 @@ bool Vector<T>::operator ==(const Vector<T>& vector) const {
     return res;
 }
 
-// Различны ли вектора.
+// ГђГ Г§Г«ГЁГ·Г­Г» Г«ГЁ ГўГҐГЄГІГ®Г°Г .
 template<typename T>
 bool Vector<T>::operator !=(const Vector<T>& vector) const
 {
@@ -640,7 +640,7 @@ bool Vector<T>::operator !=(const Vector<T>& vector) const
     return res;
 }
 
-// Суммирование всех элементов.
+// Г‘ГіГ¬Г¬ГЁГ°Г®ГўГ Г­ГЁГҐ ГўГ±ГҐГµ ГЅГ«ГҐГ¬ГҐГ­ГІГ®Гў.
 template<typename T>
 T Vector<T>::sumValue()
 {
@@ -655,7 +655,7 @@ T Vector<T>::sumValue()
     return summary;
 }
 
-// Сумма векторов
+// Г‘ГіГ¬Г¬Г  ГўГҐГЄГІГ®Г°Г®Гў
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator +(const Vector<U>& vector) const
@@ -705,7 +705,7 @@ Vector<Type>& Vector<Type>::sumEqual(const Vector<Type>& vector)
     return operator+=(vector);
 }
 
-// Cумма вектора и числа
+// CГіГ¬Г¬Г  ГўГҐГЄГІГ®Г°Г  ГЁ Г·ГЁГ±Г«Г 
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator +(const U& number) const
@@ -749,7 +749,7 @@ Vector<T>& Vector<T>::sumNumEqual(const T& number)
     return operator+=(number);
 }
 
-// Разность векторов.
+// ГђГ Г§Г­Г®Г±ГІГј ГўГҐГЄГІГ®Г°Г®Гў.
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator -(const Vector<U>& vector) const
@@ -843,8 +843,6 @@ Vector<T>& Vector<T>::subNumEqual(const T& number)
     return operator -=(number);
 }
 
-
-// Оператор вычитания - обратный вектор
 template<typename T>
 Vector<T> Vector<T>::operator -()
 {
@@ -908,4 +906,5 @@ ConstIterator<T> Vector<T>::end() const noexcept
     ConstIterator<T> iterator(*this);
     return iterator + size;
 }
+
 #endif // VECTOR_HPP
