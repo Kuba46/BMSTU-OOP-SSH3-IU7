@@ -26,7 +26,6 @@ Vector<T>::Vector(int len)
         *iterator = 0;
 }
 
-// Êîíñòðóêòîð íà îñíîâå ìàññèâà.
 template<typename T>
 Vector<T>::Vector(int len, T* array)
 {
@@ -51,7 +50,6 @@ Vector<T>::Vector(int len, T* array)
     }
 }
 
-// Êîíñòðóêòîð íà îñíîâå ýëåìåíòîâ.
 template<typename T>
 Vector<T>::Vector(int len, T vector, ...)
 {
@@ -75,7 +73,6 @@ Vector<T>::Vector(int len, T vector, ...)
     va_end(var);
 }
 
-// Êîíñòðóêòîð ñ èíèöèàëèçàöèåé.
 template<typename T>
 Vector<T>::Vector(std::initializer_list<T> args)
 {
@@ -98,7 +95,6 @@ Vector<T>::Vector(std::initializer_list<T> args)
     }
 }
 
-// Êîíñòðóêòîð îò âåêòîðà.
 template<typename T>
 Vector<T>::Vector(const Vector<T>& vector)
 {
@@ -113,7 +109,6 @@ Vector<T>::Vector(const Vector<T>& vector)
         *iteratorTo = *iteratorFrom;
 }
 
-// Êîíñòðóêòîð ïåðåíîñîì.
 template<typename T>
 Vector<T>::Vector(Vector<T>&& vector) noexcept
 {
@@ -123,7 +118,6 @@ Vector<T>::Vector(Vector<T>&& vector) noexcept
     vector.values = nullptr;
 }
 
-// Äåñòðóêòîð.
 template<typename T>
 Vector<T>::~Vector()
 {
@@ -131,7 +125,6 @@ Vector<T>::~Vector()
         values.reset();
 }
 
-// Îïåðàòîðû ïðèñâàèâàíèÿ
 template<typename T>
 Vector<T>& Vector<T>::operator =(const Vector<T>& vector)
 {
@@ -181,7 +174,6 @@ Vector<T>& Vector<T>::operator =(Vector<T>&& vector)
     return *this;
 }
 
-// Ïîëó÷åíèå ýëåìåíòà ïî èíäåêñó.
 template<typename T>
 T& Vector<T>::getItem(int index)
 {
@@ -194,7 +186,6 @@ T& Vector<T>::getItem(int index)
     return *iterator;
 }
 
-// Ïîëó÷åíèå ýëåìåíòà ïî èíäåêñó Const.
 template<typename T>
 const T& Vector<T>::getItem(int index) const 
 {
@@ -220,7 +211,6 @@ bool Vector<T>::isEmpty() const noexcept
     return bool(size);
 }
 
-// Óñòàíîâèòü çíà÷åíè ïî èíäåêñó
 template<typename T>
 bool Vector<T>::setItem(int index, const T& item)
 {
@@ -236,21 +226,18 @@ bool Vector<T>::setItem(int index, const T& item)
     return res;
 }
 
-// Îïåðàòîð èíäåêñàöèè.
 template<typename T>
 T& Vector<T>::operator[] (int index)
 {
     return getItem(index);
 }
 
-// Îïåðàòîð èíäåêñàöèè Const.
 template<typename T>
 const T& Vector<T>::operator [](int index) const
 {
     return getItem(index);
 }
 
-// Ïðîâåðêà íà íóëåâîé âåêòîð - äëèíà ðàâíàÿ 0
 template<typename T>
 bool Vector<T>::isSingle() const
 {
@@ -259,7 +246,6 @@ bool Vector<T>::isSingle() const
     return false;
 }
 
-// Ïðîâåðêà íà åäèíè÷íûé âåêòîð - äëèíà ðàâíàÿ 1
 template<typename T>
 bool Vector<T>::isZero() const
 {
@@ -268,7 +254,6 @@ bool Vector<T>::isZero() const
     return false;
 }
 
-// âû÷èñëåíèå äëèíû âåêòîðà
 template<typename T>
 T Vector<T>::getLength() const
 {
@@ -298,7 +283,6 @@ Vector<T> Vector<T>::getSingle() const
         *iterator /= len;
     return singleVector;
 }
-
 
 template<typename Type>
 template<typename U>
@@ -340,7 +324,6 @@ Vector<T>& Vector<T>::mulNumEqual(const T& num)
     return operator*=(num);
 }
 
-// Óìíîæåíèå ýëåìåíòîâ äâóõ âåêòîðîâ
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator ^(const Vector<U>& vector) const
@@ -396,7 +379,6 @@ Vector<T>& Vector<T>::mulElemsEqual(const Vector<T>& vector)
     return operator^=(vector);
 }
 
-// Ñêàëÿðíîå ïðîèçâåäåíèå
 template<typename T>
 template<typename U>
 auto Vector<T>::operator *(const Vector<U>& vector) const
@@ -436,7 +418,6 @@ T Vector<T>::scalarMulEqual(const Vector<T>& vector)
     return operator*=(vector);
 }
 
-// Âåêòîðíîå ïðîèçâåäåíèå
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator &(const Vector<U>& vector) const
@@ -489,7 +470,6 @@ Vector<T>& Vector<T>::vectorMulEqual(const Vector<T>& vector)
     return operator&=(vector);
 }
 
-// Äåëåíèå äâóõ âåêòîðîâ
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator /(const Vector<U>& vector) const
@@ -596,8 +576,6 @@ decltype(auto) Vector<T>::divNum(const U& number) const
     return operator/(number);
 }
 
-
-// Ðàâíû ëè âåêòîðà.
 template<typename T>
 bool Vector<T>::operator ==(const Vector<T>& vector) const {
     bool res = true;
@@ -618,7 +596,6 @@ bool Vector<T>::operator ==(const Vector<T>& vector) const {
     return res;
 }
 
-// Ðàçëè÷íû ëè âåêòîðà.
 template<typename T>
 bool Vector<T>::operator !=(const Vector<T>& vector) const
 {
@@ -640,7 +617,6 @@ bool Vector<T>::operator !=(const Vector<T>& vector) const
     return res;
 }
 
-// Ñóììèðîâàíèå âñåõ ýëåìåíòîâ.
 template<typename T>
 T Vector<T>::sumValue()
 {
@@ -655,7 +631,6 @@ T Vector<T>::sumValue()
     return summary;
 }
 
-// Ñóììà âåêòîðîâ
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator +(const Vector<U>& vector) const
@@ -705,7 +680,6 @@ Vector<Type>& Vector<Type>::sumEqual(const Vector<Type>& vector)
     return operator+=(vector);
 }
 
-// Cóììà âåêòîðà è ÷èñëà
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator +(const U& number) const
@@ -749,7 +723,6 @@ Vector<T>& Vector<T>::sumNumEqual(const T& number)
     return operator+=(number);
 }
 
-// Ðàçíîñòü âåêòîðîâ.
 template<typename T>
 template<typename U>
 decltype(auto) Vector<T>::operator -(const Vector<U>& vector) const
@@ -877,7 +850,6 @@ void Vector<T>::allocNewVectorMem(int amount)
     std::shared_ptr<T[]> temp(new T[amount], std::default_delete<T[]>());
     values = temp;
 }
-
 
 template<typename T>
 Iterator<T> Vector<T>::begin() noexcept
