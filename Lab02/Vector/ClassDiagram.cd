@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="DeletedObject">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\Exceptions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DifferentSizeVectors">
+    <Position X="7.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\Exceptions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseError" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAEAAAAAAAAAAAAAAAAAAAAAAAQAAACA=</HashCode>
+      <FileName>Exceptions\Exceptions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseIterator">
+    <Position X="4.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAEAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Iterators\BaseIterator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseVector">
+    <Position X="9.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Vector\BaseVector.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConstIterator&lt;T&gt;">
+    <Position X="2" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAgAAAAAAAgEQEEAAwAAAAEAAEAAAAAgAAAAAAA=</HashCode>
+      <FileName>Iterators\ConstIterator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IndexVectorError">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\Exceptions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvalidCopyArrayPointer">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\Exceptions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InvalidIterator">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <InheritanceLine Type="BaseError" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="1.191" />
+        <Point X="4" Y="2.125" />
+        <Point X="5.5" Y="2.125" />
+        <Point X="5.5" Y="2.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\Exceptions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Iterator&lt;T&gt;">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAACAAAAAAAAgEQEEAAwAAAAEAAEAAAAAgAAAAAAA=</HashCode>
+      <FileName>Iterators\Iterator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MemoryError">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\Exceptions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vector&lt;T&gt;">
+    <Position X="11.5" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAJAAGQqAGgAAARBgIAQAQCIEAACICQkAyAAAAQgA=</HashCode>
+      <FileName>Vector\Vector.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmptyVectorError">
+    <Position X="2" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\Exceptions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZeroDivError">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\Exceptions.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
